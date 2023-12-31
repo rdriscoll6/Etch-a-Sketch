@@ -10,7 +10,9 @@
   <div class="body">
       <h1>Etch-A-Sketch</h1>
       <button class="gridSize">Grid Size</button>
-    <div class="container"></div>
+    <div class="container">
+      
+    </div>
     <div class="buttons">
       <button class="black">Black</button>
       <button class="random">Random</button>
@@ -38,19 +40,26 @@
   .gridSize{
     background-color: rgb(215, 80, 80);
     padding: 10px 20px;
+    margin-bottom: 20px;
   }
   .container{
+    display: grid;
     height: 500px;
     width: 500px;
     border-style: solid;
-    margin-bottom: 20px;
-    margin-top: 20px;
+  }
+  .boxes{
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
   }
   .buttons{
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 75px;
+    margin-top: 20px;
   }
   button{
     color: white;
