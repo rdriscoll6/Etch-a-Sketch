@@ -10,11 +10,12 @@
   <div class="body">
       <h1>Etch-A-Sketch</h1>
       <button class="gridSize">Grid Size</button>
+      <p id =message></p>
     <div class="container">
       
     </div>
     <div class="buttons">
-      <button class="black">Black</button>
+      <button class="black" onclick="setColor('black')">Black</button>
       <button class="random">Random</button>
       <button class="reset">Reset</button>
     </div>
@@ -50,9 +51,7 @@
   }
   .boxes{
     background-color: rgb(255, 255, 255);
-    border-style: solid;
-    border-color: black;
-    border-width: 1px;
+    border-style: none;
   }
   .buttons{
     display: flex;
@@ -67,6 +66,9 @@
     border-radius: 5px;
     border-style: none;
     font-weight: bold;
+  }
+  #message{
+    font-family: Arial, Helvetica, sans-serif;
   }
   .reset{
     background-color: rgb(92, 92, 225);
