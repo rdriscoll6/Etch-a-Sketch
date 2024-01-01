@@ -15,9 +15,10 @@
       
     </div>
     <div class="buttons">
+      <input type = "color" id = "colorpicker" oninput="updateColorPicker()">
       <button class="black" onclick="setColor('black')">Black</button>
-      <button class="random">Random</button>
-      <button class="reset">Reset</button>
+      <button class="random" onclick = "setColor('random')">Random</button>
+      <button class="reset" onclick = "resetBoard()">Reset</button>
     </div>
     
   </div>

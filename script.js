@@ -1,12 +1,13 @@
+let color = 'black';
+
 document.addEventListener('DOMContentLoaded',()=>{
   const gridSize = document.querySelector(".gridSize");
-  createContainer(0)
-
-
+  createContainer(16)
   gridSize.addEventListener("click",()=>{
     let size = decideGridSize();
     createContainer(size);
   })
+  setColorFromPicker();
   
 })
 
@@ -21,9 +22,7 @@ let createContainer = (size) => {
     const boxes = document.createElement('div')
     boxes.className = ('boxes')
     container.insertAdjacentElement("beforeend",boxes);
-    boxes.addEventListener('mouseover',()=>{
-      boxes.style.backgroundColor = 'black';
-    })
+    boxes.addEventListener('mouseover',colorDiv)
   }
 
   
@@ -46,9 +45,21 @@ let decideGridSize = () => {
     }
 };
 
-let colorDiv = (colorChoice) => {
+function colorDiv() {
+  if (color == "random"){
+    this.style.backgroundColor = `hsl(${Math.random()*360}, 110%, 50%)`
+  }
+  else{
+    this.style.backgroundColor = 'black';
+  }
 
 }
 let setColor = (colorChoice) => {
    color = colorChoice;
 }
+
+function resetBoard(){
+  let divs = document.querySelectorAll('div');
+  divs.forEach((div) => div.style.backgroundColor = 'white')
+  }
+
